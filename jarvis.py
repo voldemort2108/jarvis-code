@@ -115,8 +115,8 @@ class MainThread(QThread):
         server = smtplib.SMTP('smtp.gmail.com',587)
         server.ehlo()
         server.starttls()
-        server.login('voldemort2108gaming@gmail.com','alohomora2108')
-        server.sendmail('voldemort2108gaming@gmail.com',person,content)
+        server.login('sender email','semder email password')
+        server.sendmail('receiver email',person,content)
         server.close()
 
 
@@ -218,7 +218,7 @@ class MainThread(QThread):
 
             elif 'send an email' in self.query :
                 
-                dict1 = {"abhinav":"abhinavsaxena.508@gmail.com","tanishka":"tanishkasaxena.24@gmail.com","mani":"tanishkasaxena.music@gmail.com","rajat":"rajatsrk123@gmail.com","nobody":"shikhavaish2021@gmail.com"}
+                dict1 = {ids in which you have to send emails}
                 try :
                     speak("whom do you want to send")
                     self.query = self.takeCommand().lower()
@@ -497,7 +497,7 @@ class MainThread(QThread):
 
 
             elif 'send message' in self.query :
-                d = dict(rohan=7652060472,yash=9198084101)
+                d = dict(name1=phone number,name2=phone number2)
                 try :
                     speak("whom do you want to send")
                     receiver_name = self.takeCommand().lower()
